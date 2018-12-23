@@ -35,8 +35,6 @@ class GameboardActivity : AppCompatActivity() {
 
     private var prePosition: Int = -1
 
-    private var btnList: MutableList<Button> = mutableListOf()
-
     private var handler: Handler = @SuppressLint("HandlerLeak")
     object : Handler() {
         override fun handleMessage(msg: Message?) {
@@ -137,12 +135,11 @@ class GameboardActivity : AppCompatActivity() {
             lp.width = size.x / col
             lp.flexGrow = 1.toFloat()
             btn.layoutParams = lp
-            btnList.add(btn)
             fl_gameboard.addView(btn)
         }
 
         fixedRateTimer("default", false, 0L, TIMER) {
-            val randomNum = Random.nextInt(0, btnList.size - 1)
+            val randomNum = Random.nextInt(0, fl_gameboard.childCount - 1)
             val message = Message()
             message.what = MSG_WHAT
             message.arg1 = randomNum
