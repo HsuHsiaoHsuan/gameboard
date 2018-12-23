@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">gameboard</string>
+    <string name="column">欄</string>
+    <string name="row">列</string>
+    <string name="multiplier">*</string>
+    <string name="start">開始玩</string>
+
+    <string name="random">random</string>
+    <string name="button">按鈕</string>
+</resources>
