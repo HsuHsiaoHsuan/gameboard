@@ -25,7 +25,7 @@ class GameboardActivity : AppCompatActivity() {
         const val MSG_WHAT = 9527
         const val TYPE_BTN_GAME = 0
         const val TYPE_BTN_BOTTOM = 1
-        const val TIMER = 1000L
+        const val TIMER = 10000L
     }
 
     private var row: Int = 0
